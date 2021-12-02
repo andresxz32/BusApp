@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import { LoginViewComponent } from './login-view/login-view.component';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 @NgModule({
@@ -12,8 +12,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    AuthRoutingModule
   ],
-  declarations: []
+  declarations: [LoginViewComponent]
 })
-export class HomePageModule {}
+export class AuthPageModule { }
