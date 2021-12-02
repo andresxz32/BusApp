@@ -18,7 +18,7 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AgmCoreModule.forRoot({ apiKey: environment.apiKey }),
+    AgmCoreModule.forRoot({ apiKey: environment.apiKey, libraries: ['geometry'] }),
     AgmDirectionModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

@@ -14,4 +14,28 @@
         <!-- <agm-direction [origin]="origin" [destination]="destination">
         </agm-direction> -->
     </agm-map>
+
+    <div class="container-info">
+        <div class="container-person">
+            <img src="../../assets/personBus.svg">
+            <div class="info-driver">
+                <h5> Julian Correa</h5>
+                <p>Bus H40J - Ruta 27 - UTP</p>
+                <div class="stars">
+                    <ng-container *ngFor="let star of stars">
+                        <img [src]=star.icon>
+                    </ng-container>
+
+                </div>
+            </div>
+            <div>
+                <img src="../../assets/megabus.svg">
+            </div>
+            <div class="container-icons">
+                <img src="../../assets/icon1.svg">
+                <img src="../../assets/credit_card_black_24dp 1.svg">
+            </div>
+        </div>
+
+    </div>
 </ion-content>
