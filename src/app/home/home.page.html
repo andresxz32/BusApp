@@ -1,9 +1,10 @@
 <ion-content [fullscreen]="true">
     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
-        <agm-marker [latitude]="latBus" [longitude]="lngBus">
+        <agm-marker [latitude]="latBus" [longitude]="lngBus" (markerClick)="clickedMarker()">
             <!-- [iconUrl]="iconBus" -->
             <agm-info-window>
-                <strong>Bus</strong>
+                <p>Bus H40J - Ruta 27 - UTP</p>
+                <p>Tiempo aproximado: {{time | number : '1.2-2'}} segundos</p>
             </agm-info-window>
         </agm-marker>
         <agm-marker [latitude]="latPerson" [longitude]="lngPerson">
@@ -11,11 +12,9 @@
                 <strong>Marción de persona</strong>
             </agm-info-window>
         </agm-marker>
-        <!-- <agm-direction [origin]="origin" [destination]="destination">
-        </agm-direction> -->
     </agm-map>
 
-    <div class="container-info">
+    <div class="container-info animate__backInUp" *ngIf="showInfo">
         <div class="container-person">
             <img src="../../assets/personBus.svg">
             <div class="info-driver">

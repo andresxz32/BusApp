@@ -11,10 +11,10 @@ export class HomePage implements OnInit {
   lngBus: number = -75.737056
 
   stars = [
-    {icon:'../../assets/star.svg'},
-    {icon:'../../assets/star.svg'},
-    {icon:'../../assets/star.svg'},
-    {icon:'../../assets/star.svg'}
+    { icon: '../../assets/star.svg' },
+    { icon: '../../assets/star.svg' },
+    { icon: '../../assets/star.svg' },
+    { icon: '../../assets/star.svg' }
   ]
 
   latPerson: number;
@@ -100,8 +100,9 @@ export class HomePage implements OnInit {
   destination: { lat: number; lng: number; };
   lat = 4.806650;
   lng = -75.737056;
-  time: number;
+  time: number = 0;
   distanceToPerson: number = 0;
+  showInfo: boolean = false;
 
 
   constructor() { }
@@ -138,6 +139,14 @@ export class HomePage implements OnInit {
   mapClicked($event: any) {
     this.latPerson = $event.coords.lat
     this.lngPerson = $event.coords.lng
+  }
+
+  show() {
+    this.showInfo = !this.showInfo
+  }
+
+  clickedMarker() {
+    this.showInfo = !this.showInfo
   }
 
 }

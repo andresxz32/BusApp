@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-view',
@@ -26,8 +27,13 @@ export class LoginViewComponent implements OnInit {
       type: 'Pasaporte'
     },
   ]
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() { }
+
+
+  goToMap() {
+    this._router.navigateByUrl('/location')
+  }
 
 }
