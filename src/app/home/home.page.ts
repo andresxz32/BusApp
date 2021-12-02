@@ -6,22 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  markers: marker[] = [
-    {
-      lat: 4.806650,
-      lng: -75.737056,
-      label: 'Estación cuba',
-      draggable: true,
-      // icon: '../../../assets/img/available.svg'google
-    },
-    // {
-    //   lat: 4.826842,
-    //   lng: -75.683633,
-    //   label: 'Estación cuba',
-    //   draggable: true,
-    //   // icon: '../../../assets/img/chargin.svg'
-    // },
-  ]
+  latBus: number = 4.806650;
+  lngBus: number = -75.737056
+
+  latPerson: number;
+  lngPerson: number;
   routeBus: Array<Object> = [
     { lat: 4.806650, lng: -75.737056 },
     { lat: 4.807301, lng: -75.736594 },
@@ -38,6 +27,12 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     this.origin = { lat: 4.8117016, lng: -75.6929977 };
     this.destination = { lat: 4.803694, lng: -75.736899 };
+  }
+
+
+  mapClicked($event: any) {
+    this.latPerson = $event.coords.lat
+    this.lngPerson = $event.coords.lng
   }
 
 }

@@ -1,9 +1,14 @@
-
 <ion-content [fullscreen]="true">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [iconUrl]="m.icon">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
+        <agm-marker [latitude]="latBus" [longitude]="lngBus">
+            <!-- [iconUrl]="iconBus" -->
             <agm-info-window>
-                <strong>Estación de recarga cuba</strong>
+                <strong>Bus</strong>
+            </agm-info-window>
+        </agm-marker>
+        <agm-marker [latitude]="latPerson" [longitude]="lngPerson">
+            <agm-info-window>
+                <strong>Marción de persona</strong>
             </agm-info-window>
         </agm-marker>
         <!-- <agm-direction [origin]="origin" [destination]="destination">
