@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [iconUrl]="m.icon">
+            <agm-info-window>
+                <strong>Estación de recarga cuba</strong>
+            </agm-info-window>
+        </agm-marker>
+        <!-- <agm-direction [origin]="origin" [destination]="destination">
+        </agm-direction> -->
+    </agm-map>
 </ion-content>
