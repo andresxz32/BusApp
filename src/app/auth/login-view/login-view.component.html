@@ -1,31 +1,29 @@
-<ion-content [fullscreen]="true">
+<ion-content fullscreen>
+  <div class="container">
     <div class="container-img">
-        <img src="../../assets/icon/iconBusApp.png">
+      <img src="../../assets/upbus_logo.svg">
     </div>
     <div class="container-login">
-        <div class="container-welcome">
-            <h1>¡Nos alegra que estés de vuelta!</h1>
+      <section class="container-inputs">
+        <ion-label color="light" position="stacked">Correo electrónico</ion-label>
+        <input class="input-item" value="">
+      </section>
+      <section class="container-inputs">
+        <ion-label color="light" position="stacked">Contraseña</ion-label>
+        <input class="input-item" type="password" value="">
+      </section>
+      <section class="container-options" lines="none">
+        <div style="display: flex;">
+          <ion-checkbox class="check" mode="md" color="primary"></ion-checkbox>
+          <h6 style="margin-left:6px;color: white;">Recordarme</h6>
         </div>
-        <ion-item>
-            <ion-label position="stacked">Número de identificación</ion-label>
-            <ion-select>
-                <ion-select-option *ngFor="let document of documents">{{document.type}}</ion-select-option>
-            </ion-select>
-        </ion-item>
-        <ion-item>
-            <ion-label position="stacked">Número de identificación</ion-label>
-            <ion-input type="text" value="1088357674"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="stacked">Contraseña</ion-label>
-            <ion-input type="password" value="12345678"></ion-input>
-        </ion-item>
-        <div class="container-button">
-            <ion-button shape="round" (click)="goToMap()">Iniciar sesión</ion-button>
-        </div>
-        <div class="container-account">
-            <p>¿Has olvidado tú contraseña?</p>
-            <p>¿No tienes cuenta? Registrate</p>
-        </div>
+        <h6 style="color: #3EE2FF;">Olvide mi contraseña</h6>
+      </section>
+
+      <div class="container-button">
+        <button (click)="goToMap()">Iniciar sesión</button>
+      </div>
     </div>
+  </div>
+
 </ion-content>
