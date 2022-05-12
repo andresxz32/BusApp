@@ -1,40 +1,40 @@
 <ion-content [fullscreen]="true">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
-        <agm-marker [latitude]="latBus" [longitude]="lngBus" (markerClick)="clickedMarker()">
-            <!-- [iconUrl]="iconBus" -->
-            <agm-info-window>
-                <p>Bus H40J - Ruta 27 - UTP</p>
-                <p>Tiempo aproximado: {{time | number : '1.2-2'}} segundos</p>
-            </agm-info-window>
-        </agm-marker>
-        <agm-marker [latitude]="latPerson" [longitude]="lngPerson">
-            <agm-info-window>
-                <strong>Marción de persona</strong>
-            </agm-info-window>
-        </agm-marker>
-    </agm-map>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
+    <agm-marker [latitude]="latBus" [longitude]="lngBus" (markerClick)="clickedMarker()">
+      <!-- [iconUrl]="iconBus" -->
+      <agm-info-window>
+        <p>Bus H40J - Ruta 27 - UTP</p>
+        <p>Tiempo aproximado: {{time | number : '1.2-2'}} segundos</p>
+      </agm-info-window>
+    </agm-marker>
+    <agm-marker [latitude]="latPerson" [longitude]="lngPerson">
+      <agm-info-window>
+        <strong>Marción de persona</strong>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
 
-    <div class="container-info animate__backInUp" *ngIf="showInfo">
-        <div class="container-person">
-            <img src="../../assets/personBus.svg">
-            <div class="info-driver">
-                <h5> Julian Correa</h5>
-                <p>Bus H40J - Ruta 27 - UTP</p>
-                <div class="stars">
-                    <ng-container *ngFor="let star of stars">
-                        <img [src]=star.icon>
-                    </ng-container>
-
-                </div>
-            </div>
-            <div>
-                <img src="../../assets/megabus.svg">
-            </div>
-            <div class="container-icons">
-                <img src="../../assets/icon1.svg">
-                <img src="../../assets/credit_card_black_24dp 1.svg">
-            </div>
+  <div class="container-info animate__backInUp" *ngIf="showInfo">
+    <div class="container-person">
+      <img src="../../assets/unsplash_s15qiB36NRo.png">
+      <div class="info-driver">
+        <h5> Michael Shumaher</h5>
+        <div class="stars">
+          <ng-container *ngFor="let star of stars">
+            <img [src]=star.icon>
+          </ng-container>
         </div>
+        <p>Ruta 27 - UTP</p>
 
+      </div>
+      <div>
+        <img src="../../assets/megabus.svg">
+      </div>
+      <div class="container-icons">
+        <img src="../../assets/icon1.svg">
+        <img src="../../assets/credit_card_black_24dp 1.svg">
+      </div>
     </div>
+
+  </div>
 </ion-content>
