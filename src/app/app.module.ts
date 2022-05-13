@@ -10,12 +10,14 @@ import { AgmDirectionModule } from 'agm-direction';
 import { AgmCoreModule } from '@agm/core';
 import { HomePage } from './home/home.page';
 import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, HomePage],
   entryComponents: [],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     AgmCoreModule.forRoot({ apiKey: environment.apiKey, libraries: ['geometry'] }),

@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
-    <agm-marker [latitude]="latBus" [longitude]="lngBus" (markerClick)="clickedMarker()">
-      <!-- [iconUrl]="iconBus" -->
+    <agm-marker [iconUrl]="'../../assets/marker.png'" [latitude]="latBus" [longitude]="lngBus"
+      (markerClick)="clickedMarker()">
       <agm-info-window>
         <p>Bus H40J - Ruta 27 - UTP</p>
         <p>Tiempo aproximado: {{time | number : '1.2-2'}} segundos</p>
@@ -14,7 +14,7 @@
     </agm-marker>
   </agm-map>
 
-  <div class="container-info animate__backInUp" *ngIf="showInfo">
+  <div class="container-info" @slideInBottom @slideOutBottom *ngIf="showInfo">
     <div class="container-person">
       <img src="../../assets/unsplash_s15qiB36NRo.png">
       <div class="info-driver">
@@ -27,7 +27,7 @@
         <p>Ruta 27 - UTP</p>
 
       </div>
-      <div>
+      <div class="container-logo">
         <img src="../../assets/megabus.svg">
       </div>
       <div class="container-icons">

@@ -23,7 +23,8 @@ agm-map {
 
     .info-driver {
       margin-left: -44px;
-      h5{
+
+      h5 {
         color: white;
       }
 
@@ -33,10 +34,19 @@ agm-map {
       }
     }
 
+    .container-logo {
+      margin-top: 10px;
+    }
+
     .container-icons {
       position: absolute;
       bottom: 76px;
-      right: 10px;
+      right: 15px;
+
+      img {
+        height: 22px;
+        width: 30px;
+      }
     }
   }
 }

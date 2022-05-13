@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AgmCoreModule, MapsAPILoader } from "@agm/core";
+import { Animations } from '../animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  animations: Animations,
 })
 export class HomePage implements OnInit {
   latBus: number = 4.806650;
@@ -124,7 +126,6 @@ export class HomePage implements OnInit {
     if (this.latPerson && this.lngPerson) {
       const bus = new google.maps.LatLng(this.latBus, this.lngBus);
       const person = new google.maps.LatLng(this.latPerson, this.lngPerson);
-      console.log(person, bus)
       const distance = google.maps.geometry.spherical.computeDistanceBetween(bus, person);
       this.calculateTime(distance);
     }
@@ -132,7 +133,6 @@ export class HomePage implements OnInit {
 
   calculateTime(distance: number) {
     this.time = distance / this.distanceToPerson
-    console.log('tiempo a pasar:', this.time)
   }
 
 
@@ -163,7 +163,7 @@ interface marker {
 
 
 // import {} from '@types/googlemaps';
-// 
+//
 
 
 
