@@ -96,6 +96,24 @@ export class HomePage implements OnInit {
     { lat: 4.807876, lng: -75.710804, speed: 59 },
     { lat: 4.808009, lng: -75.710089, speed: 58 },
     { lat: 4.808095, lng: -75.709713, speed: 56 },
+    { lat: 4.806652, lng: -75.7205307, speed: 56 },
+    { lat: 4.806556, lng: -75.718128, speed: 56 },
+    { lat: 4.806428, lng: -75.717795, speed: 56 },
+    { lat: 4.806118, lng: -75.717280, speed: 56 },
+    { lat: 4.805797, lng: -75.716668, speed: 56 },
+    { lat: 4.805572, lng: -75.716217, speed: 56 },
+    { lat: 4.805540, lng: -75.715713, speed: 56 },
+    { lat: 4.805818, lng: -75.715166, speed: 56 },
+    { lat: 4.806096, lng: -75.714501, speed: 56 },
+    { lat: 4.806214, lng: -75.713975, speed: 56 },
+    { lat: 4.806577, lng: -75.713406, speed: 56 },
+    { lat: 4.806994, lng: -75.712483, speed: 56 },
+    { lat: 4.807721, lng: -75.711388, speed: 56 },
+    { lat: 4.807956, lng: -75.710766, speed: 56 },
+    { lat: 4.808159, lng: -75.709049, speed: 56 },
+    { lat: 4.807988, lng: -75.707837, speed: 56 },
+    { lat: 4.807817, lng: -75.707451, speed: 56 },
+    { lat: 4.807357, lng: -75.706571, speed: 56 }
   ]
   zoom: number = 12;
   origin: { lat: number; lng: number; };
@@ -119,7 +137,7 @@ export class HomePage implements OnInit {
       if (counter === 70) {
         clearInterval(i);
       }
-    }, 1000);
+    }, 3000);
   }
 
   calculateDistance() {
